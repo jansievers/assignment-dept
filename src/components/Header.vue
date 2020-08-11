@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <img src="../assets/logo.svg" alt="dept Logo">
+        <img class="header__image" src="../assets/logo.svg" alt="dept Logo">
     </header>
 </template>
 
@@ -13,6 +13,8 @@ export default {
 <style scoped>
     .header {
         text-align: center;
-        margin-bottom: 20px;
+    }
+    .header__image {
+        margin: 30px 0;
     }
 </style>>

@@ -1,5 +1,6 @@
 <template>
-   <div>
+   <div class="details">
+      <a class="details__arrowBack" href="#/">&larr;</a>
       <h1>{{ details.title }} {{ details.firstname }} {{ details.lastname }}</h1>
       <ul>
          <li>Birthday: <strong>{{ details.birthday }}</strong></li>
@@ -27,3 +28,13 @@ export default {
    }
 }
 </script>
+
+<style>
+   .details {
+
+   }
+   .details__arrowBack {
+      text-decoration: none;
+      font-size: 50px;
+   }
+</style>
