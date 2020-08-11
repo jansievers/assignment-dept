@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="header">
         <img src="../assets/logo.svg" alt="dept Logo">
     </header>
 </template>
@@ -11,7 +11,8 @@ export default {
 </script>
 
 <style scoped>
-    header {
-        background-color: yellow;
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
     }
 </style>>
