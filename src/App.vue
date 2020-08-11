@@ -1,9 +1,7 @@
 <template>
     <div>
         <app-header></app-header>
-        <!-- Component from router here... -->
-        <app-list></app-list>
-        <app-details></app-details>
+        <router-view></router-view>
     </div>
 </template>
 
