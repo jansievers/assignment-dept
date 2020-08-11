@@ -26,7 +26,6 @@ export default {
          });
       },
       generateLinkWithParams(item) {
-         console.log('current item', item.name.first);
          const urlString = `#/details?title=${encodeURIComponent(item.name.title)}&firstname=${encodeURIComponent(item.name.first)}&lastname=${encodeURIComponent(item.name.last)}&birthday=${encodeURIComponent(item.dob.date)}&location=${encodeURIComponent(item.location.city)}&email=${encodeURIComponent(item.email)}&phone=${encodeURIComponent(item.phone)}`;
          return urlString;
       }

@@ -8,8 +8,6 @@
          <li>Email: <strong>{{ details.email }}</strong></li>
          <li>Phone Number: <strong>{{ details.phone }}</strong></li>
       </ul>
-
-      "birthday": "1994-02-23T07:01:10.300Z", "location": "Russell", "email": "arthur.levesque@example.com", "phone": "182-462-2368" }
    </div>
 </template>
 
@@ -31,7 +29,9 @@ export default {
 
 <style>
    .details {
-
+      border: 1x solid grey;
+      box-shadow: 2px 2px 10px grey;
+      padding: 20px;
    }
    .details__arrowBack {
       text-decoration: none;

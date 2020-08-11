@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as R from 'ramda';
 
-const apiUrl = 'https://randomuser.me/api/?results=25';
+const apiUrl = 'https://randomuser.me/api/?results=200';
 
 export const getPersons = () => {
     return axios.get(apiUrl);
