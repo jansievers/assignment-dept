@@ -2,7 +2,9 @@
    <div>
       <ul class="personList">
          <li v-for="item in listItems" class="personList__item">
-            {{ item.name.title }} {{ item.name.first }} {{ item.name.last }}
+            <a :href="generateLinkWithParams(item)" class="personList__link">
+               {{ item.name.title }} {{ item.name.first }} {{ item.name.last }}
+            </a>
          </li>
       </ul>
    </div>
@@ -22,12 +24,16 @@ export default {
          .then((res) => {
             this.listItems = dataService.normalize(res);
          });
+      },
+      generateLinkWithParams(item) {
+         console.log('current item', item.name.first);
+         const urlString = `#/details?title=${encodeURIComponent(item.name.title)}&firstname=${encodeURIComponent(item.name.first)}&lastname=${encodeURIComponent(item.name.last)}&birthday=${encodeURIComponent(item.dob.date)}&location=${encodeURIComponent(item.location.city)}&email=${encodeURIComponent(item.email)}&phone=${encodeURIComponent(item.phone)}`;
+         return urlString;
       }
    },
    beforeMount(){
       this.fetchListItems()
- },
-   
+   }
 }
 </script>
 
@@ -42,9 +48,12 @@ export default {
       border: 1x solid grey;
       box-shadow: 2px 2px 10px grey;
       margin-bottom: 20px;
+   }
+   .personList__link {
+      display: block;
       padding: 20px;
    }
-   .personList__item:hover {
+   .personList__link:hover {
       cursor: pointer;
       opacity: 0.7;
    }
